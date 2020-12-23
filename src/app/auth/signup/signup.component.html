@@ -2,8 +2,8 @@
 <form fxLayout='column' fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
         <mat-form-field>
             <input
-                type="email" 
-                matInput 
+                type="email"
+                matInput
                 placeholder="Your email"
                 ngModel
                 name="email"
@@ -28,7 +28,10 @@
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Your birthdate</mat-label>
-                <input matInput [matDatepicker]="picker">
+                <input
+                  matInput
+                  [matDatepicker]="picker"
+                  [max]="maxDate">
                 <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
