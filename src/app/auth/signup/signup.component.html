@@ -27,14 +27,18 @@
                 <mat-hint align="end">{{pwinput.value?.length}} / 6</mat-hint>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Your birthdate</mat-label>
+                <mat-label ngModel name="agree" required >Your birthdate</mat-label>
                 <input
                   matInput
                   [matDatepicker]="picker"
-                  [max]="maxDate">
+                  [max]="maxDate"
+                  ngModel
+                  name="birthDate"
+                  required>
                 <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
+              <mat-checkbox color="primary">Agree with Terms and Conditions.</mat-checkbox>
         <button mat-raised-button type="submit" color="primary" >Submit</button>
     </form>
 </section>
